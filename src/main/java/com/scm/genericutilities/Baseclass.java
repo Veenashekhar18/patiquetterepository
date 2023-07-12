@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import com.scm.pomobjectrepository.Loginpage;
 
@@ -60,7 +61,7 @@ public class Baseclass {
 			String title=driver.getTitle();
 			System.out.println(title);
 	}
-	@BeforeClass
+	@BeforeMethod
 	public void logintoapp() throws Throwable {
 		
 		//login as admin
