@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-12T10:08:50 IST" name="Default suite" finished-at="2023-07-12T10:08:50 IST" duration-ms="629">
+  <suite started-at="2023-07-12T16:20:35 IST" name="Default suite" finished-at="2023-07-12T16:20:35 IST" duration-ms="616">
     <groups>
     </groups>
-    <test started-at="2023-07-12T10:08:50 IST" name="Default test" finished-at="2023-07-12T10:08:50 IST" duration-ms="629">
+    <test started-at="2023-07-12T16:20:35 IST" name="Default test" finished-at="2023-07-12T16:20:35 IST" duration-ms="616">
       <class name="com.scm.testscripts.patiquette.CreateretailerTest">
-        <test-method is-config="true" signature="logintoapp()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@1151e434]" started-at="2023-07-12T10:08:50 IST" name="logintoapp" finished-at="2023-07-12T10:08:50 IST" duration-ms="588" status="FAIL">
+        <test-method is-config="true" signature="logintoapp()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@2dc54ad4]" started-at="2023-07-12T16:20:35 IST" name="logintoapp" finished-at="2023-07-12T16:20:35 IST" duration-ms="576" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
@@ -51,11 +51,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintoapp -->
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@1151e434]" started-at="2023-07-12T10:08:50 IST" name="openbrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689136730883" status="SKIP">
+        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@2dc54ad4]" started-at="2023-07-12T16:20:35 IST" name="openbrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689159035837" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openbrowser -->
-        <test-method signature="createretailerTest()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@1151e434]" started-at="2023-07-12T10:08:50 IST" name="createretailerTest" finished-at="2023-07-12T10:08:50 IST" duration-ms="0" status="SKIP">
+        <test-method signature="createretailerTest()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@2dc54ad4]" started-at="2023-07-12T16:20:35 IST" name="createretailerTest" finished-at="2023-07-12T16:20:35 IST" duration-ms="0" status="SKIP">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
@@ -99,11 +99,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createretailerTest -->
-        <test-method is-config="true" signature="logoutfrmapp()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@1151e434]" started-at="2023-07-12T10:08:50 IST" name="logoutfrmapp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689136730899" status="SKIP">
+        <test-method is-config="true" signature="logoutfrmapp()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@2dc54ad4]" started-at="2023-07-12T16:20:35 IST" name="logoutfrmapp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689159035852" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutfrmapp -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@1151e434]" started-at="2023-07-12T10:08:50 IST" name="closebrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689136730900" status="SKIP">
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@2dc54ad4]" started-at="2023-07-12T16:20:35 IST" name="closebrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689159035853" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
