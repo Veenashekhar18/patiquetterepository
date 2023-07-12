@@ -127,5 +127,6 @@ public class PlaceorderTest extends Baseclass {
 			//adminHP.getLogoutBtn().click();
 		}
 		*/
+			//order has been placed
 	}
 }

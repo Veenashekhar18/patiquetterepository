@@ -19,7 +19,7 @@ public class Baseclass {
 	WebActionUtility wlib=new WebActionUtility();
 	FileUtility flib=new FileUtility();
 	Excelutiliity elib=new Excelutiliity();
-	public WebDriver driver= null;
+	public static WebDriver driver;
 	//public static WebDriver sdriver;
 	public String filepath;
 
