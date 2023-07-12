@@ -32,7 +32,7 @@ public class LoginadminTest extends Baseclass {
 		String pwd = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx","Sheet1","TC_01","password");
 		String logintype=elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1","TC_01","Logintype");
 		Reporter.log(pwd);
-		
+		//made some changes
 		
 	}
 
