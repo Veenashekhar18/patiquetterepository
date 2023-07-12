@@ -33,7 +33,7 @@ public class LoginadminTest extends Baseclass {
 		String logintype=elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1","TC_01","Logintype");
 		Reporter.log(pwd);
 		//made some changes
-		
+		//update changes
 	}
 
 }
