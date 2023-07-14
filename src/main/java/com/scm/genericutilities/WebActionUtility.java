@@ -1,12 +1,18 @@
 package com.scm.genericutilities;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,11 +20,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 
 
 public class WebActionUtility {
 	FileUtility flib=new FileUtility();
-	int Timeout=20;
+	int Timeout=30;
 	
 	/**
 	 * it's an implicitly wait  Always wait for Element in DOM document & release the control if element available
@@ -273,4 +280,29 @@ public class WebActionUtility {
 			Actions act=new Actions(driver);
 			act.sendKeys(Keys.ENTER).perform();
 		}
+		
+		/**
+		 * this method is used to take screenshots
+		 * @param driver
+		 * @param screenshotname
+		 * @return
+		 */
+		public static String takescreenshot(WebDriver driver,String screenshotname)
+		{
+						
+			TakesScreenshot ts=(TakesScreenshot)driver;
+			File src=ts.getScreenshotAs(OutputType.FILE);
+			LocalDateTime dt=LocalDateTime.now();
+			String datetime=dt.toString().replace(" ","_").replace(":","_");
+			File dst=new File("./Screenshots/"+screenshotname+".png");
+			try {
+				FileUtils.copyFile(src, dst);
+			}
+			catch(IOException e)
+			{
+				e.printStackTrace();
+			}
+			return screenshotname;
+		}
+		
 }

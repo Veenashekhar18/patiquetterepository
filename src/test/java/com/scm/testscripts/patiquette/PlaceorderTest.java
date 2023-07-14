@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Random;
 
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.scm.genericutilities.Baseclass;
@@ -15,8 +16,9 @@ import com.scm.pomobjectrepository.Addproductspage;
 import com.scm.pomobjectrepository.AdminHomepage;
 import com.scm.pomobjectrepository.Loginpage;
 import com.scm.pomobjectrepository.Managestockspage;
+import com.scm.pomobjectrepository.Placeneworderpage;
 
-//@Listeners(general_utilities.Lisimpclass.class)
+@Listeners(com.scm.genericutilities.Listnersimpleclass.class)
 public class PlaceorderTest extends Baseclass {
 	@Test
 	public void placeorder() throws IOException, Throwable
@@ -46,13 +48,13 @@ public class PlaceorderTest extends Baseclass {
 			int randNum = ran.nextInt(1000);
 
 			//  Step:05 entering the text fields and create new product
-		String productname = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "productname"+""+randNum);
+		String productname = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "productname")+randNum;
 			//prodName = productname + "" + randNum;
 			String productprice = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "productprice");
 			String unitType = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "unittype");
 			String category = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "category");
 			Addproductspage addproducts = new Addproductspage(driver);
-			addproducts.addproducts(productname, productprice);
+			addproducts.addproducts(productname, productprice, unitType, category);
 			
 			//handle alert popup
 			wlib.switchtoalertwindowandaccept(driver, "product added successfully");
@@ -88,20 +90,21 @@ public class PlaceorderTest extends Baseclass {
 							Reporter.log("manage stocks page is displayed");
 						}
 						managestocks.upadatestocks(qty); // give quantity to product
+						Reporter.log("stock got upadted successfully",true);
 						wlib.switchtoalertwindowandaccept(driver, "stock quantity got updated successfully");
-						Reporter.log("stock got upadted successfully");
 						managestocks.getLogoutbtn();
 
 			// Step:15 logout as manufacturer
-			loginpage.getLogoutbtn();
-			Reporter.log("logout as manufacturer");
-
+			//loginpage.getLogoutbtn();
+			//Reporter.log("logout as manufacturer",true);
+ 
 			// Step:16 login as retailer
 			String usn1 = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_05", "rusername");
 			String pwd1 = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_05", "rpassword");
-			String logintyp = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_03","Logintype");
+			String logintype1 = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_03","Logintype");
 			//pass created username and password of created retailer
-			loginpage.Logintoappl(usn1, pwd1, logintyp);
+			
+			loginpage.Logintoappl(usn1, pwd1, logintype1);
 			System.out.println("logged in as retailer");
 			//verify retailer is logged in sucessfully
 			String title3 = driver.getTitle();
@@ -110,12 +113,13 @@ public class PlaceorderTest extends Baseclass {
 			}
 
 			//click new order
-			PlaceorderTest placeneworder = new PlaceorderTest();
-			placeneworder.placeorder();
+			Placeneworderpage placeneworder = new Placeneworderpage(driver);
+			placeneworder.ordersearchandconfirm();
 			String title4 = driver.getTitle();
 			if (title4.contains("Order Items")) {
-				Reporter.log("new order page is displayed sucessfully");
+				Reporter.log("new order page is displayed sucessfully",true);
 			}
+			//wlib.switchtoalertwindowandaccept(driver, "stock quantity got updated successfully");
 			/*
 			// Step:18 entering order quantity and place the order
 			String Qty = ex.getExceldDataByTestIDAndColName(excelFilePath, "Retailer", "TC_01", "Order_Quantity");

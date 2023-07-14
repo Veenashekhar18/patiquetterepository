@@ -16,7 +16,7 @@ WebActionUtility wlib= new WebActionUtility();
 	@FindBy(xpath="//a[.='New Order']")
 	private WebElement orderslnk;
 	
-	@FindBy(xpath = "//table[@class='table_displayData']/tbody/tr/following-sibling::tr/td[.=' Cashew cookies ']/../td[5]/input[@id='167']")
+	@FindBy(xpath = "//table[@class='table_displayData']/tbody/tr/following-sibling::tr/td[.=' Cashew cookies ']/../td[5]/input[@id='30']")
 	private WebElement enterqty;
 		
 	@FindBy(xpath="//input[@value='Post Order']")

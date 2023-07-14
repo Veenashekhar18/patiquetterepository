@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.scm.testscripts.patiquette.CreateretailerTest">
+      <class name="com.scm.testscripts.patiquette.PlaceorderTest">
         <methods>
-          <include name="logoutfrmapp"/>
-          <include name="createretailerTest"/>
           <include name="closebrowser"/>
           <include name="logintoapp"/>
+          <include name="placeorder"/>
           <include name="openbrowser"/>
         </methods>
-      </class> <!-- com.scm.testscripts.patiquette.CreateretailerTest -->
+      </class> <!-- com.scm.testscripts.patiquette.PlaceorderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

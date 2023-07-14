@@ -21,7 +21,7 @@ public class Baseclass {
 	FileUtility flib=new FileUtility();
 	Excelutiliity elib=new Excelutiliity();
 	public static WebDriver driver;
-	//public static WebDriver sdriver;
+	public static WebDriver sdriver;
 	public String filepath;
 
 	//@Parameters("browser")
@@ -50,9 +50,10 @@ public class Baseclass {
 				
 				
 		}
+		sdriver=driver;
 		driver.manage().window().maximize();
 		System.out.println("opening the browser");
-			//wlib.waitforelement(driver);//wait for 40seconds
+			wlib.waitforelement(driver);//wait for 40seconds
 			flib.getfilepathfromproeritiesfile("projectconfigdatafilepath");
 			String url=flib.getdatafromproperties(filepath,"url");
 			
@@ -60,12 +61,13 @@ public class Baseclass {
 			System.out.println("entered url");
 			String title=driver.getTitle();
 			System.out.println(title);
+			
 	}
 	@BeforeMethod
 	public void logintoapp() throws Throwable {
 		
 		//login as admin
-		//wlib.waitforelement(driver);//wait for 20seconds
+		wlib.waitforelement(driver);//wait for 20seconds
 		String usn = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx","Sheet1","TC_01","username");
 		String pwd = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx","Sheet1","TC_01","password");
 		String logintype=elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx","Sheet1","TC_01","Logintype");
@@ -73,16 +75,17 @@ public class Baseclass {
 		loginpage.Logintoappl(usn, pwd, logintype);
 		System.out.println("logged in as admin");
 	}
-@AfterMethod
+/*@AfterMethod
 	public void logoutfrmapp() {
 		Loginpage loginpage = new Loginpage(driver);
 		loginpage.getLogoutbtn();
 		System.out.println("logout");
 	}
-	
+	*/
 	  @AfterClass 
-	  public void closebrowser() { driver.close();
-	  System.out.println("close the browser"); }
+	  public void closebrowser() { 
+		  driver.close();
+	  System.out.println("Browser is closed"); }
 	 
 //@BeforeSuite to opendb
 //@AfterSuite to closedbb

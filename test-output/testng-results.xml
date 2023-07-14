@@ -1,159 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[logged in as manufacturer]]>
+    </line>
+    <line>
+      <![CDATA[orders page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[searched based on date]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-07-12T16:59:15 IST" name="Default suite" finished-at="2023-07-12T16:59:21 IST" duration-ms="5944">
+  <suite started-at="2023-07-14T10:12:58 IST" name="Default suite" finished-at="2023-07-14T10:13:07 IST" duration-ms="9094">
     <groups>
+      <group name="integration">
+        <method signature="SearchorderbydateTest.searchorder()[pri:0, instance:com.scm.testscripts.patiquette.SearchorderbydateTest@55634720]" name="searchorder" class="com.scm.testscripts.patiquette.SearchorderbydateTest"/>
+      </group> <!-- integration -->
     </groups>
-    <test started-at="2023-07-12T16:59:15 IST" name="Default test" finished-at="2023-07-12T16:59:21 IST" duration-ms="5944">
-      <class name="com.scm.testscripts.patiquette.CreateretailerTest">
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@4659191b]" started-at="2023-07-12T16:59:15 IST" name="openbrowser" finished-at="2023-07-12T16:59:21 IST" duration-ms="5901" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=114.0.5735.199)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [232c0bd0d2196e67501279d3b52c19ba, get {url=http://rmgtestingserver/domain/Supply_Chain_Management/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\veena\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64119}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64119/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 232c0bd0d2196e67501279d3b52c19ba]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=114.0.5735.199)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [232c0bd0d2196e67501279d3b52c19ba, get {url=http://rmgtestingserver/domain/Supply_Chain_Management/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\veena\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64119}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64119/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 232c0bd0d2196e67501279d3b52c19ba
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-at com.scm.genericutilities.Baseclass.openbrowser(Baseclass.java:59)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+    <test started-at="2023-07-14T10:12:58 IST" name="Default test" finished-at="2023-07-14T10:13:07 IST" duration-ms="9094">
+      <class name="com.scm.testscripts.patiquette.SearchorderbydateTest">
+        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.scm.testscripts.patiquette.SearchorderbydateTest@55634720]" started-at="2023-07-14T10:12:58 IST" name="openbrowser" finished-at="2023-07-14T10:13:00 IST" duration-ms="2286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openbrowser -->
-        <test-method is-config="true" signature="logintoapp()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@4659191b]" started-at="2023-07-12T16:59:21 IST" name="logintoapp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689161361192" status="SKIP">
+        <test-method is-config="true" signature="logintoapp()[pri:0, instance:com.scm.testscripts.patiquette.SearchorderbydateTest@55634720]" started-at="2023-07-14T10:13:00 IST" name="logintoapp" finished-at="2023-07-14T10:13:01 IST" duration-ms="966" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintoapp -->
-        <test-method signature="createretailerTest()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@4659191b]" started-at="2023-07-12T16:59:21 IST" name="createretailerTest" finished-at="2023-07-12T16:59:21 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=114.0.5735.199)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [232c0bd0d2196e67501279d3b52c19ba, get {url=http://rmgtestingserver/domain/Supply_Chain_Management/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\veena\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64119}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64119/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 232c0bd0d2196e67501279d3b52c19ba]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=114.0.5735.199)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [232c0bd0d2196e67501279d3b52c19ba, get {url=http://rmgtestingserver/domain/Supply_Chain_Management/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\veena\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64119}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64119/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 232c0bd0d2196e67501279d3b52c19ba
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-at com.scm.genericutilities.Baseclass.openbrowser(Baseclass.java:59)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method signature="searchorder()[pri:0, instance:com.scm.testscripts.patiquette.SearchorderbydateTest@55634720]" started-at="2023-07-14T10:13:01 IST" name="searchorder" finished-at="2023-07-14T10:13:07 IST" duration-ms="5445" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[logged in as manufacturer]]>
+            </line>
+            <line>
+              <![CDATA[orders page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[searched based on date]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- createretailerTest -->
-        <test-method is-config="true" signature="logoutfrmapp()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@4659191b]" started-at="2023-07-12T16:59:21 IST" name="logoutfrmapp" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689161361197" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutfrmapp -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.scm.testscripts.patiquette.CreateretailerTest@4659191b]" started-at="2023-07-12T16:59:21 IST" name="closebrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1689161361199" status="SKIP">
+        </test-method> <!-- searchorder -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.scm.testscripts.patiquette.SearchorderbydateTest@55634720]" started-at="2023-07-14T10:13:07 IST" name="closebrowser" finished-at="2023-07-14T10:13:07 IST" duration-ms="152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-      </class> <!-- com.scm.testscripts.patiquette.CreateretailerTest -->
+      </class> <!-- com.scm.testscripts.patiquette.SearchorderbydateTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

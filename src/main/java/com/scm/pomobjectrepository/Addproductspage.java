@@ -75,13 +75,15 @@ public class Addproductspage {
 		}
 
 		//business libraries
-		public void addproducts(String productname,String productprice)
+		public void addproducts(String productname,String productprice,String unittype,String category) throws InterruptedException
 		{
 			addproductslnk.click();
+			Thread.sleep(2000);
 			productnametxt.sendKeys(productname);
+			Thread.sleep(2000);
 			pricetxt.sendKeys(productprice);
-			wlib.select(productunitdrpdwn,"PCS");
-			wlib.select(productcatydrpdwn,"snacks");
+			wlib.select(productunitdrpdwn,unittype);
+			wlib.select(productcatydrpdwn,category);
 			enradiobtn.click();
 			addproductbtn.click();
 		}	

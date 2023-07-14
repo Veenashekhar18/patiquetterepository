@@ -51,6 +51,7 @@ public class Loginpage {
 	}
 
 	public WebElement getLogoutbtn() {
+		logoutbtn.click();
 		return logoutbtn;
 	}
 	//business libraries

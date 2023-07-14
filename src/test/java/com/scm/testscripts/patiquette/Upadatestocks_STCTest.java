@@ -1,6 +1,7 @@
 package com.scm.testscripts.patiquette;
 
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -15,7 +16,7 @@ import com.scm.pomobjectrepository.Loginpage;
 import com.scm.pomobjectrepository.Managestockspage;
 import com.scm.pomobjectrepository.Viewproductspage;
 
-//@Listeners(general_utilities.Lisimpclass.class)
+@Listeners(com.scm.genericutilities.Listnersimpleclass.class)
 public class Upadatestocks_STCTest extends Baseclass {
 	@Test(groups={"system","integration"})
 	public void updatestocksTest() throws Throwable {
@@ -57,8 +58,10 @@ public class Upadatestocks_STCTest extends Baseclass {
 			String productcreated = product;
 			
 			String price = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_06","productprice");
+			String unitType = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "unittype");
+			String category = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "category");
 			Addproductspage addproducts = new Addproductspage(driver);
-			addproducts.addproducts(product, price);
+			addproducts.addproducts(product, price, unitType, category);
 			// check edit profile page is diplayed
 			
 			//handle alert popup

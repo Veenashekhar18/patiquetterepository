@@ -1,6 +1,7 @@
 package com.scm.testscripts.patiquette;
 
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -13,7 +14,7 @@ import com.scm.pomobjectrepository.Createmanufacturerpage;
 import com.scm.pomobjectrepository.Loginpage;
 import com.scm.pomobjectrepository.ViewRetailerspage;
 
-//@Listeners(general_utilities.Lisimpclass.class)
+@Listeners(com.scm.genericutilities.Listnersimpleclass.class)
 public class Manufacturer_stcTest extends Baseclass {
 	@Test(groups="system")
 	public void manufacturerTest() throws Throwable {
@@ -34,7 +35,7 @@ public class Manufacturer_stcTest extends Baseclass {
 		String mphone = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_04", "mphonenum");
 		Createmanufacturerpage createmanufacturer = new Createmanufacturerpage(driver);
 		String musn = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_04",
-				"musername")+""+num;
+				"musername")+num;
 		String mpwd = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_04", "mpassword");
 		// verifying manufacturer page is displayed
 		String title = driver.getTitle();
@@ -62,7 +63,8 @@ public class Manufacturer_stcTest extends Baseclass {
 
 		// login as manufacurer
 
-		String usn = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_04", "musername");
+		//String usn = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_04", "musername");
+		String usn=musn;
 		String pwd = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_04", "mpassword");
 		String logintype = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_02",
 				"Logintype");
@@ -74,7 +76,7 @@ public class Manufacturer_stcTest extends Baseclass {
 		String title1 = driver.getTitle();
 		sa.assertEquals("View Products", title1);
 		//if (title1.contains("View Products")) {
-			Reporter.log("products page is displayed");
+			Reporter.log("products page is displayed",true);
 		//}
 		//create product 
 		String product = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_06",
@@ -82,9 +84,9 @@ public class Manufacturer_stcTest extends Baseclass {
 		String productcreated = product;
 		String price = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_06",
 				"productprice");
-//		String unitType = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "unittype");
-//		String category = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "category");
-	addproduct.addproducts(product, price);
+	String unitType = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "unittype");
+		String category = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_07", "category");
+	addproduct.addproducts(product, price, unitType, category);
 		// check created product is present
 		if (product.equals(productcreated)) {
 			Reporter.log("product created successfully"); // print the created manufacturer

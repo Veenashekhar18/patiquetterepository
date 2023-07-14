@@ -1,6 +1,7 @@
 package com.scm.testscripts.patiquette;
 
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.scm.genericutilities.Baseclass;
@@ -11,7 +12,7 @@ import com.scm.genericutilities.WebActionUtility;
 import com.scm.pomobjectrepository.Loginpage;
 import com.scm.pomobjectrepository.Orderspage;
 
-//@Listeners(general_utilities.Lisimpclass.class)
+@Listeners(com.scm.genericutilities.Listnersimpleclass.class)
 public class SearchorderbydateTest extends Baseclass {
 
 	@Test(groups="integration")

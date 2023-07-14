@@ -14,7 +14,7 @@ public class Managestockspage {
 			@FindBy(xpath = "//input[@value='Update Stock']")
 			private WebElement updatestockbtn;
 			
-			@FindBy(xpath = "//table[@class='table_displayData']/tbody/tr/td[.='cashewcookies']/following-sibling::td[2]/input[@name='txtQuantity[143]']")
+			@FindBy(xpath = "//table[@class='table_displayData']/tbody/tr/td[.='Cashew cookies']/following-sibling::td[2]/input[@name='txtQuantity[29]']")
 			private WebElement updatestocksend;
 			
 			@FindBy(xpath="//input[@value='Log out']")

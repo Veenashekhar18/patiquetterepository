@@ -18,7 +18,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-//@Listeners(general_utilities.Lisimpclass.class)
+@Listeners(com.scm.genericutilities.Listnersimpleclass.class)
 public class CreateretailerTest extends Baseclass {
 
 	@Test
@@ -35,7 +35,7 @@ public class CreateretailerTest extends Baseclass {
 				
 		// fetching data from excel to create retailer
 
-		String usn1 = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_05", "rusername")+""+num;
+		String usn1 = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_05", "rusername")+num;
 		String pwd1 = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_05", "rpassword");
 		String email = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_05", "remail");
 		String phone = elib.getdatafromexcelbasedontestid("./configuration/pati.xlsx", "Sheet1", "TC_05", "rphonenum");
