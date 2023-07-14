@@ -18,7 +18,7 @@ public class LoginadminTest extends Baseclass {
 		FileUtility flib = new FileUtility();
 		Excelutiliity elib=new Excelutiliity();
 
-		WebDriver driver = null;
+		WebDriver driver;
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		System.out.println("6");
