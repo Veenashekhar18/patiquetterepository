@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.scm.testscripts.patiquette.LoginadminTest">
+      <class name="Practice.Dataprovider1Test">
         <methods>
-          <include name="logintest"/>
-          <include name="closebrowser"/>
-          <include name="logintoapp"/>
-          <include name="openbrowser"/>
+          <include name="dataprovide"/>
         </methods>
-      </class> <!-- com.scm.testscripts.patiquette.LoginadminTest -->
+      </class> <!-- Practice.Dataprovider1Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -22,7 +22,7 @@ public class FileUtility {
 			FileInputStream fis=new FileInputStream("./configuration/filepath1.properties");
 			Properties p=new Properties();
 			p.load(fis);
-			String value=p.getProperty("projectconfigdatafilepath");
+			String value=p.getProperty(key);
 			return value;
 		}
 		/**

@@ -92,10 +92,12 @@ public class Excelutiliity {
 	 * @throws Throwable
 	 */
 	public int  getRowCount(String filePath, String sheetName) throws Throwable {
+		System.out.println(filePath);
 		FileInputStream fis1 = new FileInputStream(filePath);
 		Workbook wb =  WorkbookFactory.create(fis1);
 		Sheet sheet = wb.getSheet(sheetName);
 		int rowCount = sheet.getLastRowNum();
+		System.out.println(rowCount);
 		return rowCount;
 	}
 
