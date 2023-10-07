@@ -24,8 +24,9 @@ public class Readdatajdbc {
 			String value = res.getString(1)+" "+res.getString(2)+" "+res.getString(3)+" "+res.getString(4)+" "+res.getString(5)+" "+res.getString(6);
 			System.out.println(value);
 		}
-			
-		} finally {
+	  } 
+		finally 
+		{
 			conn.close();
 		}
 		

@@ -1,97 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-14T16:19:12 IST" name="Default suite" finished-at="2023-07-14T16:19:13 IST" duration-ms="901">
+  <suite started-at="2023-09-11T11:06:20 IST" name="Default suite" finished-at="2023-09-11T11:06:59 IST" duration-ms="38805">
     <groups>
     </groups>
-    <test started-at="2023-07-14T16:19:12 IST" name="Default test" finished-at="2023-07-14T16:19:13 IST" duration-ms="901">
-      <class name="Practice.Dataprovider1Test">
-        <test-method signature="dataprovide(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Practice.Dataprovider1Test@52af26ee]" started-at="2023-07-14T16:19:13 IST" name="dataprovide" data-provider="getusnpwd" finished-at="2023-07-14T16:19:13 IST" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[username]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[logintype]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-09-11T11:06:20 IST" name="Default test" finished-at="2023-09-11T11:06:59 IST" duration-ms="38805">
+      <class name="Practice.LogintoFacebook">
+        <test-method signature="Sendmsg()[pri:0, instance:Practice.LogintoFacebook@7c24b813]" started-at="2023-09-11T11:06:20 IST" name="Sendmsg" finished-at="2023-09-11T11:06:59 IST" duration-ms="38769" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dataprovide -->
-        <test-method signature="dataprovide(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Practice.Dataprovider1Test@52af26ee]" started-at="2023-07-14T16:19:13 IST" name="dataprovide" data-provider="getusnpwd" finished-at="2023-07-14T16:19:13 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Admim]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataprovide -->
-        <test-method signature="dataprovide(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Practice.Dataprovider1Test@52af26ee]" started-at="2023-07-14T16:19:13 IST" name="dataprovide" data-provider="getusnpwd" finished-at="2023-07-14T16:19:13 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin12]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Manufacturer]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataprovide -->
-        <test-method signature="dataprovide(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Practice.Dataprovider1Test@52af26ee]" started-at="2023-07-14T16:19:13 IST" name="dataprovide" data-provider="getusnpwd" finished-at="2023-07-14T16:19:13 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin13]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Retailer]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataprovide -->
-      </class> <!-- Practice.Dataprovider1Test -->
+        </test-method> <!-- Sendmsg -->
+      </class> <!-- Practice.LogintoFacebook -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

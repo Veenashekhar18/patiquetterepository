@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Practice.Dataprovider1Test">
+      <class name="Practice.LogintoFacebook">
         <methods>
-          <include name="dataprovide"/>
+          <include name="Sendmsg"/>
         </methods>
-      </class> <!-- Practice.Dataprovider1Test -->
+      </class> <!-- Practice.LogintoFacebook -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
